@@ -3,9 +3,34 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+	<script src="/lib/jquery/dist/jquery.min.js"></script>
+	<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+		</div>
+		<div class="col-md-4 column">
+			<h3>
+				Sign Up
+			</h3>
+			<form role="form" method="POST" action="/user/signup">
+				<div class="form-group" >
+					 <label for="">UserName</label><input class="form-control"  type="text" name="newname"/>
+				</div>
+				<div class="form-group">
+					 <label for="">Password</label><input class="form-control"  type="password" name="newpassword" />
+				</div>
+				<div class="checkbox">
+					 <label><input type="checkbox" />Check me out</label>
+				</div> <button class="btn btn-default" type="submit">Submit</button>
+			</form>
+		</div>
+		<div class="col-md-4 column">
+		</div>
+	</div>
+</div>
   </body>
 </html>
